@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jobTitle: MyText
+  company: MyText
+  hours: MyText
+  full: false
+  partTime: false
+  salary: MyText
+  description: MyText
+  requirements: MyText
+  website: MyText
+
+two:
+  jobTitle: MyText
+  company: MyText
+  hours: MyText
+  full: false
+  partTime: false
+  salary: MyText
+  description: MyText
+  requirements: MyText
+  website: MyText
