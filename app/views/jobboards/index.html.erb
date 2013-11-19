@@ -1,17 +1,29 @@
-<h1>Listing jobboards</h1>
+<!--Company Logo -->
+<div id = "title">
+  Awesome Jobs
+</div>
+
+<!--This link will later become the longin button -->
+<div class="login">
+  <%= link_to 'Post New Job', new_jobboard_path %>
+</div>
 
 <table>
-  <thead>
+  <thead class="jobCategory">
+    <tr>
+      <!--this is a static heading and only for readability -->
+      <th colspan="4" class="pageHeading"> Viewing all jobs</th>
+    </tr>
     <tr>
       <th>Jobtitle</th>
       <th>Company</th>
       <th>Hours</th>
-      <th>Full</th>
-      <th>Parttime</th>
+      <th class="hideIt">Full</th>
+      <th class="hideIt">Parttime</th>
       <th>Salary</th>
-      <th>Description</th>
-      <th>Requirements</th>
-      <th>Website</th>
+      <th class="hideIt">Description</th>
+      <th class="hideIt">Requirements</th>
+      <th class="hideIt">Website</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,16 +32,16 @@
 
   <tbody>
     <% @jobboards.each do |jobboard| %>
-      <tr>
+      <tr id="jobList">
         <td><%= jobboard.jobTitle %></td>
         <td><%= jobboard.company %></td>
         <td><%= jobboard.hours %></td>
-        <td><%= jobboard.full %></td>
-        <td><%= jobboard.partTime %></td>
+        <td class="hideIt"><%= jobboard.full %></td>
+        <td class="hideIt"><%= jobboard.partTime %></td>
         <td><%= jobboard.salary %></td>
-        <td><%= jobboard.description %></td>
-        <td><%= jobboard.requirements %></td>
-        <td><%= jobboard.website %></td>
+        <td class="hideIt"><%= jobboard.description %></td>
+        <td class="hideIt"><%= jobboard.requirements %></td>
+       <td class="hideIt"><%= jobboard.website %></td>
         <td><%= link_to 'Show', jobboard %></td>
         <td><%= link_to 'Edit', edit_jobboard_path(jobboard) %></td>
         <td><%= link_to 'Destroy', jobboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -39,5 +51,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Jobboard', new_jobboard_path %>

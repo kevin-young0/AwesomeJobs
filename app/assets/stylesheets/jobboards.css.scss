@@ -1,3 +1,47 @@
 // Place all the styles related to the jobboards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*The following styles are temporary formating styles only. 
+No colors or any advance CSS is to be used*/
+
+#wrapper{
+   margin-right: auto;
+   margin-left: auto;
+   padding:10px;
+}
+
+/* contains the company logo*/
+#title{
+  font-size:300%;
+  padding: auto;
+   text-align:left;
+}
+
+/* controls the link that will one day be the login button*/
+.login{
+  font-size:100%;
+  padding:0, 0, 15px, 30px;
+  text-align:right;
+}
+
+/* this is a static heading and only for readability*/
+.pageHeading{
+   font-size:150%;
+    text-align:left;
+}
+
+/* containor that holds the job category headers*/
+.jobCategory{
+  
+}
+
+/* containor that holds job entries*/
+#jobList{
+  
+}
+
+/* hides items from view*/
+.hideIt{
+  display:none;
+}
