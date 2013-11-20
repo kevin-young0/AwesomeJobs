@@ -9,6 +9,11 @@ caption{
    height:25px;
    padding: 20px, 0px, 20px, 0px;
 }
+
+table{
+   margin-right: auto;
+   margin-left: auto;
+}
   
 td{
   text-align: center;
@@ -64,12 +69,12 @@ th{
 
 .rOneRow{
    text-align: right;
-    width:10%;
+    width:14%;
 }
 
 .lOneRow{
     text-align: left;
-    width:10%;
+    width:14%;
 }
 
 .blackBorder{
@@ -94,4 +99,9 @@ th{
 
 .lAlign{
    text-align: left;
+}
+
+.cAlign{
+   margin-right: auto;
+   margin-left: auto;
 }
