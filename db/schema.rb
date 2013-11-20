@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117043208) do
+ActiveRecord::Schema.define(version: 20131120223755) do
 
   create_table "jobboards", force: true do |t|
     t.text     "jobTitle"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20131117043208) do
     t.text     "website"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end
