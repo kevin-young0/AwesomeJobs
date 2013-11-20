@@ -1,5 +1,23 @@
-<h1>New jobboard</h1>
+<div id="wrapper">
+  
+    <!--This link will later become the longin button -->
+   <div class="login">
+    <%= link_to 'Post New Job', new_jobboard_path %>
+   </div>
 
-<%= render 'form' %>
+  <div id = "title">
+    Awesome Jobs
+  </div>
 
-<%= link_to 'Back', jobboards_path %>
+  <br><br>
+
+  <div class="pageHeading">Create New Job Post</div>
+
+  <%= render 'form' %>
+
+  <br>
+  <br>
+  <div class="cAlign">
+    <%= link_to 'Return to Home', jobboards_path %>
+  </div>
+</div>

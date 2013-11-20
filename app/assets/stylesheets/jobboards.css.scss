@@ -5,9 +5,11 @@
 /*The following styles are temporary formating styles only. 
 No colors or any advance CSS is to be used*/
 
-caption{
-   height:25px;
-   padding: 20px, 0px, 20px, 0px;
+
+table{
+   margin-right: auto;
+   margin-left: auto;
+  width:100%;
 }
   
 td{
@@ -46,7 +48,9 @@ th{
 /* this is a static heading and only for readability*/
 .pageHeading{
    border-bottom-style:solid;
-   font-size:150%;;
+   font-size:150%;
+   height:25px;
+   padding: 20px, 0px, 20px, 0px;
    text-align:left;
 }
 
@@ -64,12 +68,12 @@ th{
 
 .rOneRow{
    text-align: right;
-    width:10%;
+    width:14%;
 }
 
 .lOneRow{
     text-align: left;
-    width:10%;
+    width:14%;
 }
 
 .blackBorder{
@@ -77,6 +81,9 @@ th{
    border-width:3px;
    height: 60px;
 }
+
+/* Styles for "edit" pages */
+
 
 /* ****** stand alone styles ******** */
 
@@ -94,4 +101,10 @@ th{
 
 .lAlign{
    text-align: left;
+}
+
+.cAlign{
+   margin-right: auto;
+   margin-left: auto;
+  text-align:center;
 }

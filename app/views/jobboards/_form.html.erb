@@ -11,43 +11,98 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :jobTitle %><br>
-    <%= f.text_area :jobTitle %>
-  </div>
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_area :company %>
-  </div>
-  <div class="field">
-    <%= f.label :hours %><br>
-    <%= f.text_area :hours %>
-  </div>
-  <div class="field">
-    <%= f.label :full %><br>
-    <%= f.check_box :full %>
-  </div>
-  <div class="field">
-    <%= f.label :partTime %><br>
-    <%= f.check_box :partTime %>
-  </div>
-  <div class="field">
-    <%= f.label :salary %><br>
-    <%= f.text_area :salary %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :requirements %><br>
-    <%= f.text_area :requirements %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br>
-    <%= f.text_area :website %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <table>
+    <tbody>
+
+      
+      <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :JobTitle %>:<br>
+        <td colspan="4" class="lAlign">
+         <%= f.text_area :jobTitle %>
+        </td>
+      </tr>
+    
+      <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :company %>:<br>
+        <td colspan="4" class="lAlign">
+          <%= f.text_area :company %>
+        </td>
+      </tr>
+    
+      <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :hours %>:<br>
+        </td>
+        <td colspan="4" class="lAlign">
+           <%= f.text_area :hours %>
+        </td>
+      </tr>
+    
+       <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :full %>:<br>
+        </td>
+        <td colspan="4" class="lAlign">
+          <%= f.check_box :full %>
+        </td>
+      </tr>
+    
+      <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :partTime %>:<br>
+        </td>
+        <td colspan="4" class="lAlign">
+          <%= f.check_box :partTime %>
+        </td>
+      </tr>
+    
+      <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :salary %>:<br>
+        </td>
+        <td colspan="4" class="lAlign">
+         <%= f.text_area :salary %>
+        </td>
+      </tr>
+    
+      <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :description %>:<br>
+        </td>
+        <td colspan="4" class="lAlign">
+          <%= f.text_area :description %>
+        </td>
+      </tr>
+    
+       <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :requirements %>:<br>
+        </td>
+        <td colspan="4" class="lAlign">
+          <%= f.text_area :requirements %>
+        </td>
+      </tr>
+ 
+       <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :website %>:<br>
+        <td colspan="4" class="lAlign">
+          <%= f.text_area :website %>
+        </td>
+      </tr>
+    
+    <tr class="field">
+        <td colspan="8" class="actions">
+          <%=f.submit %>
+        </td>
+     </tr>
+     </tbody>
+   </table>
+  
+
+
+
 <% end %>
