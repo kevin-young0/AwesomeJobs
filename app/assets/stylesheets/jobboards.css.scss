@@ -5,9 +5,11 @@
 /*The following styles are temporary formating styles only. 
 No colors or any advance CSS is to be used*/
 
-caption{
-   height:25px;
-   padding: 20px, 0px, 20px, 0px;
+
+table{
+   margin-right: auto;
+   margin-left: auto;
+  width:100%;
 }
 
 table{
@@ -51,7 +53,9 @@ th{
 /* this is a static heading and only for readability*/
 .pageHeading{
    border-bottom-style:solid;
-   font-size:150%;;
+   font-size:150%;
+   height:25px;
+   padding: 20px, 0px, 20px, 0px;
    text-align:left;
 }
 
@@ -83,6 +87,9 @@ th{
    height: 60px;
 }
 
+/* Styles for "edit" pages */
+
+
 /* ****** stand alone styles ******** */
 
 .hideIt{
@@ -104,4 +111,8 @@ th{
 .cAlign{
    margin-right: auto;
    margin-left: auto;
+<<<<<<< HEAD
+=======
+  text-align:center;
+>>>>>>> kaylie
 }
