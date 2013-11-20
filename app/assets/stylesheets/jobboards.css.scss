@@ -24,7 +24,7 @@ th{
    margin-right: auto;
    margin-left: auto;
    padding:10px;
-   width:80%;
+   width:95%;
 }
 
 /* contains the company logo*/
@@ -60,7 +60,38 @@ th{
   
 }
 
-/* hides items from view*/
+/* Styles for "show" pages*/
+
+.rOneRow{
+   text-align: right;
+    width:10%;
+}
+
+.lOneRow{
+    text-align: left;
+    width:10%;
+}
+
+.blackBorder{
+   border-style:solid;
+   border-width:3px;
+   height: 60px;
+}
+
+/* ****** stand alone styles ******** */
+
 .hideIt{
-  display:none;
+   display:none;
+}
+
+.line{
+    border-bottom-style:solid;
+}
+
+.rAlign{
+   text-align: right;
+}
+
+.lAlign{
+   text-align: left;
 }

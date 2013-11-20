@@ -1,49 +1,117 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Jobtitle:</strong>
-  <%= @jobboard.jobTitle %>
-</p>
+<div id="wrapper">
+  
+    <!--This link will later become the longin button -->
+   <div class="login">
+    <%= link_to 'Post New Job', new_jobboard_path %>
+   </div>
 
-<p>
-  <strong>Company:</strong>
-  <%= @jobboard.company %>
-</p>
+  <div id = "title">
+    Awesome Jobs
+  </div>
 
-<p>
-  <strong>Hours:</strong>
-  <%= @jobboard.hours %>
-</p>
+  <br><br>
 
-<p>
-  <strong>Full:</strong>
-  <%= @jobboard.full %>
-</p>
-
-<p>
-  <strong>Parttime:</strong>
-  <%= @jobboard.partTime %>
-</p>
-
-<p>
-  <strong>Salary:</strong>
-  <%= @jobboard.salary %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @jobboard.description %>
-</p>
-
-<p>
-  <strong>Requirements:</strong>
-  <%= @jobboard.requirements %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @jobboard.website %>
-</p>
-
-<%= link_to 'Edit', edit_jobboard_path(@jobboard) %> |
-<%= link_to 'Back', jobboards_path %>
+  
+  <table>
+    <thead>
+      <tr class="fourRow"> 
+        <th colspan="4" class="rAlign">
+          <strong>Currently Viewing:</strong>
+        </th>
+        <th colspan="4" class="lAlign">
+        <%= @jobboard.jobTitle %>
+        </th>
+      </tr>
+    </thead>
+    <br>
+    <tbody>
+      
+      <tr>
+        <td colspan="8" class="line">
+        </td>
+     </tr>
+      
+      <tr>
+        <td colspan="2" class="rAlign">
+          <strong>Company:</strong>
+        </td>
+        <td colspan="2" class="lAlign">
+          <%= @jobboard.company %>
+        </td>
+        <td colspan="2"  class="rAlign">
+          <strong>Website:</strong>
+       </td>
+        <td colspan="2"  class="lAlign">
+          <%= @jobboard.website %>
+        </td>
+    </tr>
+      
+     <tr>
+        <td colspan="8" class="line">
+        </td>
+    </tr>
+      
+    <tr>
+        <td class="rOneRow"> 
+          <strong>Hours Per Week:</strong>
+        </td>
+        <td class="lOneRow"> 
+         <%= @jobboard.hours %>
+        </td>
+        <td class="rOneRow"> 
+          <strong>Salary:</strong>
+       </td>
+        <td class="lOneRow"> 
+          <%= @jobboard.salary %>
+        </td>
+        <td class="rOneRow"> 
+          <strong>Full Time:</strong>
+       </td>
+        <td class="lOneRow"> 
+          <%= @jobboard.full %>
+        </td>
+        <td class="rOneRow"> 
+          <strong>Part Time:</strong>
+        </td>
+        <td class="lOneRow"> 
+          <%= @jobboard.partTime %>
+        </td>
+    </tr>
+      
+      <tr>
+        <td colspan="8" class="line">
+        </td>
+     </tr>
+      
+    <tr>
+      <td colspan="4">
+          <strong>Description</strong>
+      </td>
+      <td colspan="4">
+        <strong>Requirements</strong>
+      </td>
+    </tr>
+      
+      <tr>
+      <td colspan="4" class="blackBorder">
+         <%= @jobboard.description %>
+      </td>
+      <td colspan="4" class="blackBorder">
+         <%= @jobboard.requirements %>
+      </td>
+    </tr> 
+  </tbody>
+ 
+   <tfoot>
+      <br>  <br>
+     <td colspan="4" class="rAlign">
+         <%= link_to 'Edit This Post', edit_jobboard_path(@jobboard) %> 
+     </td>
+     <td colspan="4" class="lAlign">
+         <%= link_to 'Return to Home', jobboards_path %>
+     </td>
+    </tfoot>
+    </table>
+</div>
