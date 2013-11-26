@@ -6,7 +6,9 @@ class JobboardsController < ApplicationController
   # GET /jobboards
   # GET /jobboards.json
   def index
-    @jobboards = Jobboard.all
+    # default line "@jobboards = Jobboard.all" to the below so that job list on
+    # home page is sorted according to time created
+    @jobboards= Jobboard.order("created_at desc")
   end
 
   # GET /jobboards/1
