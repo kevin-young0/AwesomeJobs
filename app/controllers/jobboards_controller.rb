@@ -1,4 +1,6 @@
 class JobboardsController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show, :new]
+  
   before_action :set_jobboard, only: [:show, :edit, :update, :destroy]
 
   # GET /jobboards
