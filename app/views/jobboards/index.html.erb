@@ -19,7 +19,7 @@
     </thead>
 
     <tbody>
-      <% @jobboards.order(:created_at).reverse.each do |jobboard| %>
+      <% @jobboards.each do |jobboard| %>
         <tr id="jobList">
           <td><%= jobboard.jobTitle %></td>
           <td><%= jobboard.company %></td>
