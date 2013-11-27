@@ -84,7 +84,7 @@ th{
 .blackBorder{
    border-style:solid;
    border-width:3px;
-   height: 60px;
+   min-height: 60px;
 }
 
 /* Styles for "edit" pages */
@@ -112,4 +112,8 @@ th{
    margin-right: auto;
    margin-left: auto;
   text-align:center;
+}
+
+.whiteSpace{
+  height: 20px;
 }
