@@ -1,10 +1,14 @@
 class JobboardsController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show, :new]
+  
   before_action :set_jobboard, only: [:show, :edit, :update, :destroy]
 
   # GET /jobboards
   # GET /jobboards.json
   def index
-    @jobboards = Jobboard.all
+    # default line "@jobboards = Jobboard.all" to the below so that job list on
+    # home page is sorted according to time created
+    @jobboards= Jobboard.order("created_at desc")
   end
 
   # GET /jobboards/1
@@ -69,6 +73,6 @@ class JobboardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jobboard_params
-      params.require(:jobboard).permit(:jobTitle, :company, :hours, :full, :partTime, :salary, :description, :requirements, :website)
+      params.require(:jobboard).permit(:jobTitle, :company, :hours, :full, :partTime, :salary, :description, :requirements, :website, :email)
     end
 end
