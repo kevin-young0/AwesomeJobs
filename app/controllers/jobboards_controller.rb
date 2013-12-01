@@ -8,7 +8,7 @@ class JobboardsController < ApplicationController
   def index
     # default line "@jobboards = Jobboard.all" to the below so that job list on
     # home page is sorted according to time created
-    @jobboards= Jobboard.order("created_at desc")
+    @jobboards = Jobboard.where(:approved => true).order("created_at desc")
   end
 
   # GET /jobboards/1
@@ -73,6 +73,6 @@ class JobboardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jobboard_params
-      params.require(:jobboard).permit(:jobTitle, :company, :hours, :full, :partTime, :salary, :description, :requirements, :website, :email)
+      params.require(:jobboard).permit(:jobTitle, :company, :hours, :full, :partTime, :salary, :description, :requirements, :website, :email, :approved)
     end
 end

@@ -1,4 +1,5 @@
 AwesomeJobs::Application.routes.draw do
+  get "admin_page/admin"
   resources :jobboards
 
   # The priority is based upon order of creation: first created -> highest priority.
