@@ -25,7 +25,7 @@
     
       <tr  class="field">
         <td colspan="4" class="rAlign">
-          <%= f.label :company %><br>
+          <%= f.label :company %>:<br>
         </td>
         <td colspan="4" class="lAlign">
           <%= f.text_area :company %>
@@ -88,7 +88,7 @@
  
        <tr  class="field">
         <td colspan="4" class="rAlign">
-          <%= f.label :website %><br>
+          <%= f.label :website %>:<br>
         </td>
         <td colspan="4" class="lAlign">
           <%= f.text_area :website %>
@@ -97,13 +97,22 @@
     
     <tr  class="field">
         <td colspan="4" class="rAlign">
-          <%= f.label :email %><br>
+          <%= f.label :email %>:<br>
         </td>
         <td colspan="4" class="lAlign">
           <%= f.text_field :email %>
         </td>
       </tr>
 
+    <tr class="field">
+      <td colspan="4" class="rAlign">
+        <%  f.label :approved %>:<br>
+      </td>
+      <td colspan="4" class="lAlign">
+        <%= f.select :approved, Jobboard::APPROVE_TYPES %>
+      </td>
+    </tr>
+    
     <tr class="field">
       <td colspan="8" class="actions">
         <%=f.submit %>
