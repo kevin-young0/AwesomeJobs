@@ -4,12 +4,14 @@ one:
   jobTitle: MyText
   company: MyText
   hours: MyText
-  full: false
-  partTime: false
+  full: true
+  partTime: true
   salary: MyText
   description: MyText
   requirements: MyText
   website: MyText
+  email: company@company.com
+  approved: true
 
 two:
   jobTitle: MyText
@@ -21,3 +23,5 @@ two:
   description: MyText
   requirements: MyText
   website: MyText
+  email: someone@co.net
+  approved: true
