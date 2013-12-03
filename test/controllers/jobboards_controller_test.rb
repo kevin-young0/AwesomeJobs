@@ -3,6 +3,19 @@ require 'test_helper'
 class JobboardsControllerTest < ActionController::TestCase
   setup do
     @jobboard = jobboards(:one)
+    @update = {
+      :jobTitle 'Lorem Ipsum'
+      :company 'Company Name'
+      :hours'20 hours'
+      :full'true'
+      :partTime'true'
+      :salary'20000'
+      :description'Job Description'
+      :requirements'Job Requiremants'
+      :website'www.Company.com'
+      :email'company@company.com'
+      :approved'true'
+      }
   end
 
   test "should get index" do
@@ -18,7 +31,7 @@ class JobboardsControllerTest < ActionController::TestCase
 
   test "should create jobboard" do
     assert_difference('Jobboard.count') do
-      post :create, jobboard: { company: @jobboard.company, description: @jobboard.description, full: @jobboard.full, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle, partTime: @jobboard.partTime, requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website }
+      post :create, jobboard: @update
     end
 
     assert_redirected_to jobboard_path(assigns(:jobboard))
@@ -35,8 +48,8 @@ class JobboardsControllerTest < ActionController::TestCase
   end
 
   test "should update jobboard" do
-    patch :update, id: @jobboard, jobboard: { company: @jobboard.company, description: @jobboard.description, full: @jobboard.full, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle, partTime: @jobboard.partTime, requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website }
-    assert_redirected_to jobboard_path(assigns(:jobboard))
+    put :update, id: @jobboards, jobboards: @update
+  assert_redirected_to jobboard_path(assigns(:jobboard))
   end
 
   test "should destroy jobboard" do
