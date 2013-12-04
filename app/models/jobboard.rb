@@ -1,4 +1,7 @@
 class Jobboard < ActiveRecord::Base
+  
+  
+  
   before_create :set_approval_to_false
 
   #validates so that no field can be left empty

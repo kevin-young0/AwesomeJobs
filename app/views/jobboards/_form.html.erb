@@ -119,8 +119,7 @@
        </td>
     </tr>
 
-
-    
+  
     
     
     
@@ -134,7 +133,12 @@
      </tbody>
    </table>
   
-
+<% if $adminFlag == true then %>
+    <p>It's working!</p>
+<p><%= $adminFlag %></p>
+    <% else %>
+    <p>It's not working... :(</p>
+    <% end %>
 
 
 <% end %>
