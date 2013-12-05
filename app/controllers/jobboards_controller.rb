@@ -1,17 +1,7 @@
 class JobboardsController < ApplicationController
-  #http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show, :new, :create]
  
-  before_filter :set_admin
+  before_filter :set_admin, except: [:index, :show, :new, :create]
   before_action :set_jobboard, only: [:show, :edit, :update, :destroy]
-  
-  def set_admin
-    authenticate_or_request_with_http_basic do |name, password|
-      if name == 'admin' && password == 'secret'
-            $adminFlag = true
-          end
-    end
-  
-end
 
   # GET /jobboards
   # GET /jobboards.json
@@ -83,8 +73,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jobboard_params
-
       params.require(:jobboard).permit(:jobTitle, :company, :hours, :full, :partTime, :salary, :description, :requirements, :website, :email, :approved)
-
     end
+  
 end

@@ -2,15 +2,13 @@
   <% if @jobboard.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@jobboard.errors.count, "error") %> prohibited this jobboard from being saved:</h2>
-
       <ul>
-      <% @jobboard.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @jobboard.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
 
   <table>
   <tbody>
@@ -103,28 +101,21 @@
           <%= f.text_field :email %>
         </td>
       </tr>
-    
-    
-    
-    
+
   <tr  class="field">
     <td colspan="4" class="rAlign">
 
      </td>
        <td colspan="4" class="lAlign">
-         <%= f.radio_button(:approved, true )  %>
-         <%= f.label(:approved, "Approve Job") %>
-         <%= f.radio_button(:approved,  false) %>
-         <%= f.label(:approved, "Deny Job") %>
+         <% if logged_in then %>
+           <%= f.radio_button(:approved, true )  %>
+           <%= f.label(:approved, "Approve Job") %>
+           <%= f.radio_button(:approved,  false) %>
+           <%= f.label(:approved, "Deny Job") %>
+         <% end %>
        </td>
     </tr>
 
-  
-    
-    
-    
-    
-    
         <tr class="field">
       <td colspan="8" class="actions">
         <%=f.submit %>
@@ -132,13 +123,5 @@
     </tr>
      </tbody>
    </table>
-  
-<% if $adminFlag == true then %>
-    <p>It's working!</p>
-<p><%= $adminFlag %></p>
-    <% else %>
-    <p>It's not working... :(</p>
-    <% end %>
-
 
 <% end %>

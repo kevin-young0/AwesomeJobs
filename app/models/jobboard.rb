@@ -1,7 +1,5 @@
 class Jobboard < ActiveRecord::Base
-  
-  
-  
+
   before_create :set_approval_to_false
 
   #validates so that no field can be left empty
@@ -10,8 +8,6 @@ class Jobboard < ActiveRecord::Base
  	with: %r{\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*},
  	message: "Please check and make sure you entered a valid email address."
  	}
-  validates_inclusion_of :approved, :in => [true, false]
-  
 
   #setting approval to false in DB
   def set_approval_to_false
