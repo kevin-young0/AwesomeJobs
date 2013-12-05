@@ -4,10 +4,9 @@ class Jobboard < ActiveRecord::Base
 
   #validates so that no field can be left empty
   validates  :jobTitle,  :company,  :hours,  :full,  :partTime,  :salary,  :description,  :requirements,  :website, :email,  presence: true
-  validates :email, allow_blank: true, format:{
- 	with: %r{\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*},
- 	message: "Please check and make sure you entered a valid email address."
- 	}
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
+ message: "Please check and make sure you entered a valid email address."
+
 
   #setting approval to false in DB
   def set_approval_to_false
