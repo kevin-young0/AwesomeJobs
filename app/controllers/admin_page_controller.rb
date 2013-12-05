@@ -5,7 +5,7 @@ class AdminPageController < ApplicationController
   # GET /jobboards
   # GET /jobboards.json
   def admin
-    @jobboards = Jobboard.order("created_at desc")
+    @jobboards = Jobboard.order("approved, created_at desc")
   end
   
 end
