@@ -49,14 +49,27 @@ class JobboardsControllerTest < ActionController::TestCase
 
     assert_redirected_to jobboards_path
   end
-  
-  test "email url" do
-    ###################################Unfinished###################
-#     email: @jobboard.email
-#     it { should accept_values_for(:email, "john@example.com", "lambda@gusiev.com") }
+    
+    class JobboardEmailTest < ActiveSupport::TestCase
+     test "allows valid email" do
+       addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
+       addresses.each do |valid_address|
+          user = Jobboard.new(:email => valid_address)
+          user .valid?
+          assert user.errors[:email].empty?
+        end
+    end
 
-#     it { should_not accept_values_for(:email, "invalid", nil, "a@b", "john@.com") }
 
+    test "rejects invalid email" do
+      addresses = %w[user@foo,com user_at_foo.org example.user@foo.
+                     foo@bar_baz.com foo@bar+baz.com]
+      addresses.each do |invalid_address|
+        user = Jobboard.new(:email =>  invalid_address)
+        user.valid?
+        assert user.errors[:email].any?
+       end
+    end
   end
   
 end
