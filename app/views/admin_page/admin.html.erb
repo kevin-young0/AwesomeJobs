@@ -3,6 +3,7 @@
   <caption class="pageHeading"> Viewing all jobs</caption>
   <thead class="jobCategory">
     <tr>
+      <th>Date</th>
       <th>Job Title</th>
       <th>Company</th>
       <th>Hours Per Week</th>
@@ -21,6 +22,7 @@
   <tbody>
     <% @jobboards.each do |jobboard| %>
     <tr id="jobList">
+      <td><%= jobboard.created_at %></td>
       <td><%= jobboard.jobTitle %></td>
       <td><%= jobboard.company %></td>
       <td><%= jobboard.hours %></td>
