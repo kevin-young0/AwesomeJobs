@@ -2,10 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*The following styles are temporary formating styles only. 
+/* Color Scheme
+
+Blues
+114279
+40648B
+669EDC
+86AEDC
+3573b9
+Oranges
+BF9350
+A66C12
+ffb139
+ffc46a
+ffd492
+
+*/
+
+/* Overall CSS for application.html.erb */
+html{
+  background-color: #3573B9;
+  //background-color: #669EDC;
+}
+body{
+  color: #111133;
+  //color: #000000;
+  background-color: #3573B9;
+  //background-color: #669EDC;
+}
+
+#wrapper{
+  background-color: #3573B9;
+  //background-color: #669EDC;
+  color: #111133;
+   
+}
+
+#wrapperSpacing{
+  margin-right: auto;
+  margin-left: auto;
+  padding:10px;
+  width:95%;
+}
+
+div{
+  border-color: #ffb139;
+}
+
+/* contains the company logo*/
+#title{
+  font-size:400%;
+  font-weight:strong;
+  height: 60px;
+  padding: 10px,0, 10px, 0;
+  text-align:left;
+  //color: #ffc46a;
+  color: #ffb139;
+  margin-top: 20px;
+}
+
+/* Honestly, this is the site's navigation*/
+#nav{
+  font-size:100%;
+  height: 60px;
+  padding-right: 10px;
+  text-align:right;
+  width: 200px;
+  background-color:#ffffff;
+  border-style:solid;
+  border-width:3px;
+  border-color: #ffb139;
+  float: right;
+  vertical-align: middle;
+}
+
+/* Table Formats -- for the Form 
 No colors or any advance CSS is to be used*/
-
-
 table{
    margin-right: auto;
    margin-left: auto;
@@ -27,29 +99,6 @@ th{
    padding: 20px, 0px, 20px, 0px;
 }
 
-#wrapper{
-   margin-right: auto;
-   margin-left: auto;
-   padding:10px;
-   width:95%;
-}
-
-/* contains the company logo*/
-#title{
-   font-size:300%;
-   height: 20px;
-   padding: 10px,0, 10px, 0;
-   text-align:left;
-}
-
-/* controls the link that will one day be the login button*/
-.login{
-  font-size:100%;
-  height: 20px;
-  padding:0, 0, 15px, 30px;
-  text-align:right;
-}
-
 /* this is a static heading and only for readability*/
 .pageHeading{
    border-bottom-style:solid;
@@ -57,6 +106,7 @@ th{
    height:25px;
    padding: 20px, 0px, 20px, 0px;
    text-align:left;
+    color: #ffb139;
 }
 
 /* containor that holds the job category headers*/
@@ -71,6 +121,14 @@ th{
 
 /* Styles for "show" pages*/
 
+h2{
+  color: #ffb139;
+}
+
+h3{
+  color: #ffb139;
+}
+
 .rOneRow{
    text-align: right;
     width:14%;
@@ -82,9 +140,25 @@ th{
 }
 
 .blackBorder{
-   border-style:solid;
-   border-width:3px;
-   min-height: 60px;
+  border-style:solid;
+  border-width:3px;
+  border-color: #ffb139;
+  min-height: 60px;
+  background-color: #ffffff;
+  margin: 2px;
+}
+
+.bottomLink{
+  border-style:solid;
+  border-width:3px;
+  border-color: #ffb139;
+  min-height: 40px;
+  width: 200px;
+  background-color: #ffffff;
+  margin: 2px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align:center;
 }
 
 /* Styles for "edit" pages */
