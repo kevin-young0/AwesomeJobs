@@ -1,13 +1,17 @@
-<div class="pageHeading">Editing Current Job Post</div>
-
-<%= render 'form' %>
-
-  <br>
-  <br>
-  <div class="cAlign">
-    <div class="bottomLink">
-      <%= link_to 'View Job', @jobboard %>
+  <div class="container">
+    <div class="sixteen columns">     
+      <div class="pageHeading">Editing Current Job Post</div>
+      
+      <%= render 'form' %>
+    
       <br>
-      <%= link_to 'Return to Admin Home',  admin_path %> 
+      <br>
+      <div class="cAlign">
+        <div class="bottomLink">
+          <%= link_to 'View Job', @jobboard %>
+          <br>
+          <%= link_to 'Return to Admin Home',  admin_path %> 
+        </div>
+      </div>
     </div>
-  </div>
+  <div>
