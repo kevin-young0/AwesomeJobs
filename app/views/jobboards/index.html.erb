@@ -1,42 +1,64 @@
-  <table class="viewTable">
-      <!--this is a static heading and only for readability -->
-      <caption class="pageHeading"> Viewing all jobs</caption>
-     
-     <thead class="jobCategory">
-      <tr>
-        <th>Job Title</th>
-        <th>Company</th>
-        <th>Hours Per Week</th>
-        <th class="hideIt">Full</th>
-        <th class="hideIt">Parttime</th>
-        <th>Salary</th>
-        <th class="hideIt">Description</th>
-        <th class="hideIt">Requirements</th>
-        <th class="hideIt">Website</th>
-        <th></th>
-        <th></th>
-        <th class="hideIt"></th>
-      </tr>
-      <tr>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @jobboards.each do |jobboard| %>
-        <tr id="jobList">
-          <td><%= jobboard.jobTitle %></td>
-          <td><%= jobboard.company %></td>
-          <td><%= jobboard.hours %></td>
-          <td class="hideIt"><%= jobboard.full %></td>
-          <td class="hideIt"><%= jobboard.partTime %></td>
-          <td><%= jobboard.salary %></td>
-          <td class="hideIt"><%= jobboard.description %></td>
-          <td class="hideIt"><%= jobboard.requirements %></td>
-          <td class="hideIt"><%= jobboard.website %></td>
-          <td><%= link_to 'View', jobboard %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
+  
+  <div class="container">
+    <div class="three columns">
+      <div class="ad">
+      </div>
+      <div class="ad">
+      </div>
+      <div class="ad">
+      </div>
+    </div>
+    <div class="ten columns">
+  
+      <table class="viewTable">
+          <!--this is a static heading and only for readability -->
+          <caption class="pageHeading"> Viewing all jobs</caption>
+         
+         <thead class="jobCategory">
+          <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Hours Per Week</th>
+            <th class="hideIt">Full</th>
+            <th class="hideIt">Parttime</th>
+            <th>Salary</th>
+            <th class="hideIt">Description</th>
+            <th class="hideIt">Requirements</th>
+            <th class="hideIt">Website</th>
+            <th></th>
+            <th></th>
+            <th class="hideIt"></th>
+          </tr>
+          <tr>
+          </tr>
+        </thead>
+    
+        <tbody>
+          <% @jobboards.each do |jobboard| %>
+            <tr id="jobList">
+              <td><%= jobboard.jobTitle %></td>
+              <td><%= jobboard.company %></td>
+              <td><%= jobboard.hours %></td>
+              <td class="hideIt"><%= jobboard.full %></td>
+              <td class="hideIt"><%= jobboard.partTime %></td>
+              <td><%= jobboard.salary %></td>
+              <td class="hideIt"><%= jobboard.description %></td>
+              <td class="hideIt"><%= jobboard.requirements %></td>
+              <td class="hideIt"><%= jobboard.website %></td>
+              <td><%= link_to 'View', jobboard %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    
+      <br>
+    </div>
+    <div class="three columns">
+      <div class="ad">
+      </div>
+      <div class="ad">
+      </div>
+      <div class="ad">
+      </div>
+    </div>
+  <div>
