@@ -60,7 +60,7 @@ class JobboardsController < ApplicationController
   def destroy
     @jobboard.destroy
     respond_to do |format|
-      format.html { redirect_to jobboards_url }
+      format.html { redirect_to admin_url }
       format.json { head :no_content }
     end
   end
