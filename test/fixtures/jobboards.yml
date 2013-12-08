@@ -4,7 +4,7 @@ one:
   jobTitle: MyText
   company: MyText
   hours: MyText
-  full: true
+  numberOfJobs: 1
   partTime: true
   salary: MyText
   description: MyText
@@ -17,6 +17,7 @@ two:
   jobTitle: MyText
   company: MyText
   hours: MyText
+  numberOfJobs: 1
   full: false
   partTime: false
   salary: MyText

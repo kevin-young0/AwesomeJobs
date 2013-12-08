@@ -15,9 +15,9 @@
       
       <tr  class="field">
         <td colspan="4" class="rAlign">
-          <%= f.label :JobTitle %>:<br>
+          <%= f.label :jobTitle %>:<br>
         <td colspan="4" class="lAlign">
-         <%= f.text_area :jobTitle %>
+         <%= f.text_field :jobTitle %>
         </td>
       </tr>
     
@@ -26,7 +26,7 @@
           <%= f.label :company %>:<br>
         </td>
         <td colspan="4" class="lAlign">
-          <%= f.text_area :company %>
+          <%= f.text_field :company %>
         </td>
       </tr>
     
@@ -35,11 +35,18 @@
           <%= f.label :hours %>:<br>
         </td>
         <td colspan="4" class="lAlign">
-           <%= f.text_area :hours %>
+           <%= f.text_field :hours %>
         </td>
       </tr>
-    
-       <tr  class="field">
+      <tr  class="field">
+        <td colspan="4" class="rAlign">
+          <%= f.label :numberOfJobs %>:<br>
+        </td>
+        <td colspan="4" class="lAlign">
+           <%= f.text_field :numberOfJobs %>
+        </td>
+      </tr>
+      <tr  class="field">
         <td colspan="4" class="rAlign">
           <%= f.label :full %>:<br>
         </td>
@@ -62,7 +69,7 @@
           <%= f.label :salary %>:<br>
         </td>
         <td colspan="4" class="lAlign">
-         <%= f.text_area :salary %>
+         <%= f.text_field :salary %>
         </td>
       </tr>
     
@@ -89,7 +96,7 @@
           <%= f.label :website %>:<br>
         </td>
         <td colspan="4" class="lAlign">
-          <%= f.text_area :website %>
+          <%= f.text_field :website %>
         </td>
       </tr>
     
