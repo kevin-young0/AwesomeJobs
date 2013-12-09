@@ -18,7 +18,7 @@ class JobboardsControllerTest < ActionController::TestCase
 
   test "should create jobboard" do
     assert_difference('Jobboard.count') do
-      post :create, jobboard: { company: @jobboard.company, description: @jobboard.description, full: @jobboard.full, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle, partTime: @jobboard.partTime, requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website, email:@jobboard.email, approved:@jobboard.approved}
+      post :create, jobboard: { company: @jobboard.company, description: @jobboard.description, jobType: @jobboard.jobType, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle,  requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website, email:@jobboard.email, approved:@jobboard.approved}
     end
 
     assert_redirected_to jobboard_path(assigns(:jobboard))
@@ -37,7 +37,7 @@ class JobboardsControllerTest < ActionController::TestCase
 
   test "should update jobboard" do
     @request.env["HTTP_AUTHORIZATION"] = "Basic " + Base64::encode64("admin:secret")
-    patch :update, id: @jobboard, jobboard: { company: @jobboard.company, description: @jobboard.description, full: @jobboard.full, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle, partTime: @jobboard.partTime, requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website , email:@jobboard.email, approved:@jobboard.approved}
+    patch :update, id: @jobboard, jobboard: { company: @jobboard.company, description: @jobboard.description, jobType: @jobboard.jobType, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle,  requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website , email:@jobboard.email, approved:@jobboard.approved}
     assert_redirected_to jobboard_path(assigns(:jobboard))
   end
 
@@ -47,7 +47,7 @@ class JobboardsControllerTest < ActionController::TestCase
       delete :destroy, id: @jobboard
     end
 
-    assert_redirected_to jobboards_path
+    assert_redirected_to admin_path
   end
     
     class JobboardEmailTest < ActiveSupport::TestCase
