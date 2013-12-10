@@ -11,14 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205050303) do
+ActiveRecord::Schema.define(version: 20131209072349) do
 
   create_table "jobboards", force: true do |t|
     t.text     "jobTitle"
     t.text     "company"
     t.text     "hours"
-    t.boolean  "full"
-    t.boolean  "partTime"
     t.text     "salary"
     t.text     "description"
     t.text     "requirements"
@@ -27,14 +25,9 @@ ActiveRecord::Schema.define(version: 20131205050303) do
     t.datetime "updated_at"
     t.string   "email"
     t.boolean  "approved"
+    t.string   "jobType"
     t.integer  "numberOfJobs"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "password_digest"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
+

@@ -48,19 +48,10 @@
       </tr> 
       <tr  class="field">
         <td colspan="4" class="rAlign">
-          <%= f.label :full %>:<br>
+          <%= f.label :jobType %>:<br>
         </td>
         <td colspan="4" class="lAlign">
-          <%= f.check_box :full %>
-        </td>
-      </tr>
-    
-      <tr  class="field">
-        <td colspan="4" class="rAlign">
-          <%= f.label :partTime %>:<br>
-        </td>
-        <td colspan="4" class="lAlign">
-          <%= f.check_box :partTime %>
+          <%= f.select :jobType, Jobboard::JOB_TYPES %>
         </td>
       </tr>
     

@@ -73,7 +73,7 @@ class JobboardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jobboard_params
-      params.require(:jobboard).permit(:jobTitle, :company, :hours, :numberOfJobs, :full, :partTime, :salary, :description, :requirements, :website, :email, :approved)
+      params.require(:jobboard).permit(:jobTitle, :company, :hours, :numberOfJobs, :salary, :description, :requirements, :website, :email, :approved, :jobType)
     end
   
 end
