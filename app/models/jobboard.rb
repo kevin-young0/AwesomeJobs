@@ -8,7 +8,7 @@ class Jobboard < ActiveRecord::Base
  message: "Please check and make sure you entered a valid email address."
 
   #add values for select box
-JOB_TYPES = ["Full Time",  "Part Time",  "Full/Part Time" ]
+  JOB_TYPES = ["Full Time",  "Part Time",  "Full/Part Time" ]
 
   #setting approval to false in DB
   def set_approval_to_false
