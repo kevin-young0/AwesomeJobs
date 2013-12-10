@@ -11,6 +11,7 @@ one:
   website: MyText
   email: company@company.com
   approved: true
+  numberOfJobs: 1
 
 two:
   jobTitle: MyText
@@ -23,3 +24,4 @@ two:
   website: MyText
   email: someone@co.net
   approved: true
+  numberOfJobs: 1

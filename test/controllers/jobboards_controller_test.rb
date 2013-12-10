@@ -18,11 +18,7 @@ class JobboardsControllerTest < ActionController::TestCase
 
   test "should create jobboard" do
     assert_difference('Jobboard.count') do
-<<<<<<< HEAD
-      post :create, jobboard: { company: @jobboard.company, description: @jobboard.description, full: @jobboard.full, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle, partTime: @jobboard.partTime, requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website, email:@jobboard.email}
-=======
-      post :create, jobboard: { company: @jobboard.company, description: @jobboard.description, jobType: @jobboard.jobType, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle,  requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website, email:@jobboard.email, approved:@jobboard.approved}
->>>>>>> 0d3dd3898ade4cdfc8b13cbf07f3a98291ff5c30
+    post :create, jobboard: { company: @jobboard.company, description: @jobboard.description, jobType: @jobboard.jobType, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle,  requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website, email:@jobboard.email, approved:@jobboard.approved, numberOfJobs: @jobboard.numberOfJobs}
     end
 
     assert_redirected_to jobboard_path(assigns(:jobboard))
@@ -41,7 +37,7 @@ class JobboardsControllerTest < ActionController::TestCase
 
   test "should update jobboard" do
     @request.env["HTTP_AUTHORIZATION"] = "Basic " + Base64::encode64("admin:secret")
-    patch :update, id: @jobboard, jobboard: { company: @jobboard.company, description: @jobboard.description, jobType: @jobboard.jobType, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle,  requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website , email:@jobboard.email, approved:@jobboard.approved}
+    patch :update, id: @jobboard, jobboard: { company: @jobboard.company, description: @jobboard.description, jobType: @jobboard.jobType, hours: @jobboard.hours, jobTitle: @jobboard.jobTitle,  requirements: @jobboard.requirements, salary: @jobboard.salary, website: @jobboard.website , email:@jobboard.email, approved:@jobboard.approved, numberOfJobs: @jobboard.numberOfJobs}
     assert_redirected_to jobboard_path(assigns(:jobboard))
   end
 
@@ -74,9 +70,13 @@ class JobboardsControllerTest < ActionController::TestCase
        end
     end
   end
-
   test "Number of jobs" do
     Jobboard.new(:numberOfJobs => 1)
-    assert_not_nil(:numberOfJobs)
+    assert_not_nil(:numberOfJobs, "Number of jobs is not nil")
+  end
+  test "fields not to be empty" do
+    jobboards = Jobboard.new
+    assert jobboards.invalid?
+    assert jobboards.errors[:numberOfJobs].any?
   end
 end

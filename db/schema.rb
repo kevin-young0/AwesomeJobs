@@ -25,9 +25,15 @@ ActiveRecord::Schema.define(version: 20131209072349) do
     t.datetime "updated_at"
     t.string   "email"
     t.boolean  "approved"
-    t.string   "jobType"
     t.integer  "numberOfJobs"
+    t.string   "jobType"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
-
