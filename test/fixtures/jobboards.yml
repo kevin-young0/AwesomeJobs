@@ -4,7 +4,7 @@ one:
   jobTitle: MyText
   company: MyText
   hours: MyText
-  jobType: full
+  jobType: Full Time
   salary: MyText
   description: MyText
   requirements: MyText
@@ -17,7 +17,7 @@ two:
   jobTitle: MyText
   company: MyText
   hours: MyText
-  jobType: part time
+  jobType: Full/Part Time
   salary: MyText
   description: MyText
   requirements: MyText

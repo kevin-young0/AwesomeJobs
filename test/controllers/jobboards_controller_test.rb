@@ -79,4 +79,12 @@ class JobboardsControllerTest < ActionController::TestCase
     assert jobboards.invalid?
     assert jobboards.errors[:numberOfJobs].any?
   end
+  
+  test "jobType only allow one of three values" do
+    selectValues  = ["Full Time",  "Part Time",  "Full/Part Time"]
+   selectValues.each do |select_values|
+      user = Jobboard.new(:jobType => select_values)
+     assert_equal(select_values,  user.jobType, "Value not recognized as one of the three values accepted. Faild at " + user.jobType)
+      end
+  end
 end
