@@ -11,21 +11,20 @@
   <!--Company Logo -->
   <div id="wrapper">
     <div id="wrapperSpacing">
-      
-      <div id="nav">
-        <%= link_to 'Post New Job', new_jobboard_path %>
-        <br>
-        <%= link_to 'Return to Admin Home',  admin_path %>  
-        <br>
-        <%= link_to 'Return to Home', jobboards_path %>
-      </div>
-      
-      <div id = "titlePositioning">
+      <div id="heading">
         <div id = "title">
-          Awesome Jobs
+          <div class="cAlign">
+            <%= link_to 'Awesome Jobs', jobboards_path %>
+          </div>
+        </div>
+        <div id="nav">
+          <br>
+          <%= link_to 'Post New Job', new_jobboard_path %>
+          <br>
+          <%= link_to 'Return to Admin Home',  admin_path %>  
+
         </div>
       </div>
-      
       
 
       <br><br>
