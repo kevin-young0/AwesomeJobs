@@ -40,15 +40,15 @@
       </tr>
       <tr  class="field">
         <td colspan="4" class="rAlign">
-          <%= f.label :numberOfJobs %>:<br>
+          <%= f.label :numberOfJobs, "Number of Jobs" %>:<br>
         </td>
         <td colspan="4" class="lAlign">
-           <%= f.text_field :numberOfJobs %>
+           <%= f.text_field :numberOfJobs, :size=>"46" %>
         </td>
       </tr> 
       <tr  class="field">
         <td colspan="4" class="rAlign">
-          <%= f.label :jobType %>:<br>
+          <%= f.label :jobType, "Job Type" %>:<br>
         </td>
         <td colspan="4" class="lAlign">
           <%= f.select :jobType, Jobboard::JOB_TYPES %>

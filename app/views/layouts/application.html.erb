@@ -13,21 +13,13 @@
     <div id="wrapperSpacing">
       <div id="heading">
         <div id = "title">
-          <div class="cAlign">
             <%= link_to 'Awesome Jobs', jobboards_path %>
-          </div>
         </div>
         <div id="nav">
-          <br>
           <%= link_to 'Post New Job', new_jobboard_path %>
-          <br>
-          <%= link_to 'Return to Admin Home',  admin_path %>  
-
         </div>
       </div>
       
-
-      <br><br>
 <%= yield %>
     </div>
    </div>

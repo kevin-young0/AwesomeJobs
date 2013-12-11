@@ -32,7 +32,7 @@ class JobboardsController < ApplicationController
 
     respond_to do |format|
       if @jobboard.save
-        format.html { redirect_to @jobboard, notice: 'Jobboard was successfully created.' }
+        format.html { redirect_to @jobboard, notice: 'Job was successfully created.' }
         format.json { render action: 'show', status: :created, location: @jobboard }
       else
         format.html { render action: 'new' }
@@ -46,7 +46,7 @@ class JobboardsController < ApplicationController
   def update
     respond_to do |format|
       if @jobboard.update(jobboard_params)
-        format.html { redirect_to @jobboard, notice: 'Jobboard was successfully updated.' }
+        format.html { redirect_to @jobboard, notice: 'Job was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
